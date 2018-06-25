@@ -286,7 +286,7 @@ nav h1 a {
 /* for medium screens */
 @media screen and (min-width: 650px) and (max-width: 800px) {
   #restaurants-list li {
-    width: 45%;
+    width: 50%;
   }
 }
 
