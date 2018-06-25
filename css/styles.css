@@ -142,6 +142,9 @@ nav h1 a {
   justify-content: center;
 }
 #restaurants-list li {
+  width: 100%;
+}
+#restaurants-list .li_container {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
@@ -149,7 +152,6 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 100%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
