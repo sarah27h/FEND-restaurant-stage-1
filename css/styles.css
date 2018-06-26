@@ -204,8 +204,8 @@ nav h1 a {
   /* position: fixed; */
   position: relative;
   right: 0;
-  /* top: 80px; */
-  top: 131px;
+  top: 80px;
+  /* top: 131px; */
 }
 #map-container {
   width: 100%;
@@ -252,8 +252,9 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  /* padding: 140px 40px 30px; */
+  padding: 100px 40px 30px;
+  width: 100%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
