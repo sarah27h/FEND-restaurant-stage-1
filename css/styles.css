@@ -331,6 +331,18 @@ nav h1 a {
   }
 }
 
+@media screen and (min-width: 650px) {
+  #restaurant-container, #reviews-container {
+    width: 50%;
+  }
+  #reviews-container {
+    padding: 100px 20px 30px;
+  }
+  .inside #footer {
+    position: relative;
+  }
+}
+
 /* for large screens */
 @media screen and (min-width: 801px) {
   #restaurants-list li {
