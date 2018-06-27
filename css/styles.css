@@ -231,7 +231,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+	width: 100%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -247,17 +247,18 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   /* padding: 140px 40px 30px; */
-  padding: 100px 40px 30px;
+  padding: 100px 20px 30px;
   width: 100%;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  /* padding: 30px 40px 80px; */
+  padding: 30px 20px 80px;  
 }
 #reviews-container h2 {
   color: #f58500;
@@ -273,6 +274,7 @@ nav h1 a {
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
+  border-radius: 20px 0;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -281,7 +283,33 @@ nav h1 a {
   position: relative;
   width: 85%;
 }
+#reviews-list .review_titleWrap {
+  background: #333;
+    padding: 16px;
+    border-radius: 20px 0 0 0;
+    margin: 0 -19px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#reviews-list .review_titleWrap p:first-child {
+  font-size: 18px;
+  color: #fff;
+}
+#reviews-list .review_titleWrap p:last-child {
+  color: #ddd;
+}
 #reviews-list li p {
+  margin: 0;
+}
+#reviews-list .rating{
+  width: 30%;
+  background: #ffb813;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
   margin: 0 0 10px;
 }
 #restaurant-hours td {
