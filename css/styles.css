@@ -343,20 +343,29 @@ nav h1 a {
 }
 
 @media screen and (min-width: 650px) {
-  #restaurant-container, #reviews-container {
-    width: 50%;
-  }
-  #reviews-container {
-    padding: 160px 20px 30px;
-  }
-  .inside #footer {
-    position: relative;
-  }
   #restaurant-name {
     font-size: 2em;
   }
   #breadcrumb li {
     font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .inside #map-container {
+    position: fixed;
+    width: 45%;
+    order:1;
+  }
+  #restaurant-container, #reviews-container {
+    width: 51%;
+  }
+  #restaurant-container {
+    order: 2;
+  }
+  #reviews-container {
+    order: 3;
+    padding: 30px 20px 30px;
   }
 }
 
