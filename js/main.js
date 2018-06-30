@@ -162,7 +162,8 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.srcset = DBHelper.imageLargeUrlForRestaurant(restaurant); 
-  image.sizes='100vw';
+  image.sizes ='100vw';
+  image.alt = `${restaurant.name} restaurant`;
   liContainer.append(image);
 
   const name = document.createElement('h1');
