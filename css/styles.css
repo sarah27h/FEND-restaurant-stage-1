@@ -57,6 +57,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -379,4 +380,19 @@ nav h1 a {
   #restaurants-list .restaurant-img {
     min-height: 185px;
   }
+}
+
+/* ====================== Accessibility ====================== */
+.skip-link {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  background: #fff;
+  color: #333;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 45px;
 }

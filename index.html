@@ -26,12 +26,14 @@
     </nav>
   </header>
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <main id="maincontent">
     <section id="map-container">
       <div id="map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div id="main" class="filter-options" tabindex="-1">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
