@@ -151,11 +151,11 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`./img/${restaurant.photograph}`);
   }
   // to add srcset to img tag to set image depend on device resolution 
   static imageLargeUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph} 800w, /img/${restaurant.photolarge} 1600w`);
+    return (`./img/${restaurant.photograph} 800w,./img/${restaurant.photolarge} 1600w`);
   }
 
   /**
