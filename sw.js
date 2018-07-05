@@ -1,6 +1,8 @@
+let staticCacheName = 'restaurant-static-v1';
+
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open('restaurant-static-v1').then(function(cache) {
+        caches.open('staticCacheName').then(function(cache) {
             return cache.addAll([
                 '/',
                 'index.html',
@@ -37,5 +39,20 @@ self.addEventListener('fetch', function(event){
         .catch(function(error) {
             console.log('error cannot fetch');
         })
+    );
+});
+
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                
+                cacheNames.filter(function(cacheName) {
+                    return cacheName.startsWith('restaurant-static') && cacheName != staticCacheName;
+                }).map(function(cacheName) {
+                    return caches.delete(cacheName);
+                })
+            )
+        }) 
     );
 });
