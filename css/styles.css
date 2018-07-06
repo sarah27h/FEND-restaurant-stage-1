@@ -200,7 +200,7 @@ nav h1 a {
 }
 #restaurants-list li a {
   background-color: orange;
-  border: 1px solid #6f6f6f;
+  /* border: 1px solid #6f6f6f; */
   color: #333;
   display: inline-block;
   font-size: 10pt;
@@ -406,12 +406,39 @@ nav h1 a {
   position: absolute;
   top: -35px;
   left: 0;
-  background: #006598;
-  color: #fff;
+  background: #fff;
+  color: #006598;
   padding: 8px;
   z-index: 10000000;
+  transition: top 1s ease;
 }
 .skip-link:focus {
-  top: 25px;
+  top: 0;
+  box-shadow: none;
+  border: 1px solid #006598;
+}
+
+a:focus,
+a:hover,
+#cuisines-select:focus,
+#neighborhoods-select:focus {
+  outline: 0;
+  box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.8);
+}
+#restaurants-list li a:hover,
+#restaurants-list li a:focus{
+  box-shadow: 0 0 8px 3px rgba(180, 180, 180, 0.8);
+}
+nav h1 a:hover,
+nav h1 a:focus,
+.filter-options h2:focus {
+  box-shadow: none;
+  outline: 1px solid #fff;
   color: #fff;
+  padding:10px;
+}
+#breadcrumb li a:focus {
+  box-shadow: none;
+  outline: 1px solid #333;
+  padding:10px;
 }
