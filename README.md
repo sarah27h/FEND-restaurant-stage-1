@@ -1,32 +1,67 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+Restaurant Reviews: Stage 1 (frontend-nanodegree)
+===============================
 
-## Project Overview: Stage 1
+## Table of Contents
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+* [Direct Link](#live-link)
+* [About the Project](#about-the-project)
+* [Project Overview](#project-overview)
+* [Instructions](#instructions)
+* [Test Caching](#test-caching)
+* [Leaflet.js and Mapbox](#leaflet.js-and-mapbox)
+* [Sources](#sources)
+* [License](#license)
 
-### Specification
+## Live Link
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
-
-### What do I do from here?
-
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
-
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-## Leaflet.js and Mapbox:
-
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+https://sarah27h.github.io/FEND-restaurant-stage-1/
 
 
+## About the Project
+
+Users can use Filter Results to filter neighborhoods and cuisines and then choose the restaurant he wants and uses maps to know the location of the restaurant.
+
+
+## Project Overview
+
+In this project is a restaurant reviews website provide a response for a range of screen sizes, have a responsive images size to the viewport and accessible for screen reader users and uses service worker to cache website visited pages letting users view those pages and give users a better experience in cases lie-fi, low connection, offline faster loading for pages in low and high connection cases.
+
+
+## Instructions
+
+    Download project folder or clone it.
+    To open project:
+        - locally on your machine you need to use server
+            1- check python version in the terminal `python -V`
+                - If you have Python 2.x -> spin up the server with `python -m SimpleHTTPServer 8000`.
+                -  If you have PythonPython 3.x, you can use `python -m http.server 8000`.
+                (or some other port, if port 8000 is already in use.)
+                - If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+            2- open `index.html` in your browser.
+        - Online use live version https://sarah27h.github.io/FEND-restaurant-stage-1/
+
+## Test Caching
+
+    - Opening `index.html` click on any restaurant button.
+    - click on home link.
+    - Open dev tools -> Network tab -> check offline only.
+    - Reload page you should see it :)
+
+
+## Leaflet.js and Mapbox
+
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+
+
+## Sources
+    - https://webaim.org/techniques/skipnav/
+    - https://www.w3.org/TR/wai-aria-1.1/
+    - https://developer.mozilla.org/en-US/
+    - w3schools.com
+    - stackoverflow
+    - https://developers.google.com/web/fundamentals/codelabs/offline/
+
+## License
+
+This project is licensed under the terms of the <a href="https://choosealicense.com/licenses/mit/" rel="nofollow">MIT</a> license.
 
