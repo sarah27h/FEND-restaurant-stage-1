@@ -21,8 +21,8 @@ p {
 
 body {
 	background-color: #fdfdfd;
-	margin: 0;
-  position: 
+  margin: 0;
+  position: relative;
 }
 
 ul,
@@ -126,12 +126,6 @@ nav h1 a {
 #breadcrumb li a {
   color: #005097;
   text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-#breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
 }
 
 
@@ -517,8 +511,15 @@ nav h1 a:focus,
   padding: 10px;
 }
 
-#breadcrumb li a:focus {
+#breadcrumb li a:focus,
+#breadcrumb li a:hover {
   box-shadow: none;
   outline: 1px solid #333;
   padding: 10px;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
 }
