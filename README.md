@@ -45,7 +45,6 @@ In this project is a restaurant reviews website provide a response for a range o
     - Opening `index.html` click on any restaurant button.
     - click on home link.
     - Open dev tools -> Network tab -> check offline only.
-    - Reload page you should see it :)
 
 
 ## Leaflet.js and Mapbox
@@ -60,6 +59,7 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
     - w3schools.com
     - stackoverflow
     - https://developers.google.com/web/fundamentals/codelabs/offline/
+    - Map from https://www.mapbox.com/
 
 ## License
 
