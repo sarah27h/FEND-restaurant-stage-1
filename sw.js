@@ -1,22 +1,15 @@
 let staticCacheName = 'restaurant-static-v1';
 
+// add event listener for SW install event
 self.addEventListener('install', function(event) {
     event.waitUntil(
+        // open a cache to hold pages we want to cache
+        // at install of SW
         caches.open('staticCacheName').then(function(cache){
             return cache.addAll([
                 './',
                 './index.html',
                 './restaurant.html',
-                // './restaurant.html?id=1',
-                // './restaurant.html?id=2',
-                // './restaurant.html?id=3',
-                // './restaurant.html?id=4',
-                // './restaurant.html?id=5',
-                // './restaurant.html?id=6',
-                // './restaurant.html?id=7',
-                // './restaurant.html?id=8',
-                // './restaurant.html?id=9',
-                // './restaurant.html?id=10',
                 './css/styles.css',
                 './js/dbhelper.js',
                 './js/main.js',
@@ -76,9 +69,11 @@ self.addEventListener('install', function(event) {
 //     );
 // });
 
+// add event listener for fetch event
 self.addEventListener('fetch', function(event){
     console.log(event.request.url);
-    
+    // response from our caches array if matched one found
+    // fecth the request link if no matched one found in caches array
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
@@ -114,7 +109,8 @@ self.addEventListener('fetch', function(event){
 //     );
 // });
 
-
+// add event listener for activate event
+// delete the old one 
 self.addEventListener('activate', function(event) {
     event.waitUntil(
         caches.keys().then(function(cacheNames) {
