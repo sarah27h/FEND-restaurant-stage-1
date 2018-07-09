@@ -42,9 +42,14 @@ In this project is a restaurant reviews website provide a response for a range o
 
 ## Test Caching
 
-    - Opening `index.html` click on any restaurant button.
+    - Make sure you are in online mode (offline not selected)
+    - Use live version https://sarah27h.github.io/FEND-restaurant-stage-1/
+    - Click on any restaurant button to open restaurant page and to make sure it added to our caches array.
     - click on home link.
     - Open dev tools -> Network tab -> check offline only.
+    - Open restaurant page you have visited
+    - Reload page you should see it :)
+    note: only the visited pages online mode by user will be cached and the not visited ones will not be cached.
 
 
 ## Leaflet.js and Mapbox
@@ -58,6 +63,7 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
     - https://developer.mozilla.org/en-US/
     - w3schools.com
     - stackoverflow
+    - https://developers.google.com/web/fundamentals/primers/service-workers/
     - https://developers.google.com/web/fundamentals/codelabs/offline/
     - Map from https://www.mapbox.com/
 
