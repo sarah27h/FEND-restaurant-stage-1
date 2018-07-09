@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         // open a cache to hold pages we want to cache
         // at install of SW
-        caches.open('staticCacheName').then(function(cache){
+        caches.open(staticCacheName).then(function(cache){
             return cache.addAll([
                 './',
                 './index.html',
