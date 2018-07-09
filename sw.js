@@ -38,16 +38,6 @@ self.addEventListener('install', function(event) {
 //                 './',
 //                 './index.html',
 //                 './restaurant.html',
-//                 // './restaurant.html?id=1',
-//                 // './restaurant.html?id=2',
-//                 // './restaurant.html?id=3',
-//                 // './restaurant.html?id=4',
-//                 // './restaurant.html?id=5',
-//                 // './restaurant.html?id=6',
-//                 // './restaurant.html?id=7',
-//                 // './restaurant.html?id=8',
-//                 // './restaurant.html?id=9',
-//                 // './restaurant.html?id=10',
 //                 './css/styles.css',
 //                 './js/dbhelper.js',
 //                 './js/main.js',
@@ -70,26 +60,69 @@ self.addEventListener('install', function(event) {
 // });
 
 // add event listener for fetch event
-self.addEventListener('fetch', function(event){
-    console.log(event.request.url);
-    // response from our caches array if matched one found
-    // fecth the request link if no matched one found in caches array
-    event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            console.log(this);
+// self.addEventListener('fetch', function(event){
+//     console.log(event.request.url);
+//     // response from our caches array if matched one found
+//     // fecth the request link if no matched one found in caches array
+//     event.respondWith(
+//         caches.match(event.request)
+//         .then(function(response) {
+//             console.log(this);
 
-            if(response) return response;
-            console.log(response);
-            console.log(event.request);
-            return fetch(event.request);
+//             if(response) return response;
+//             console.log(response);
+//             console.log(event.request);
+//             return fetch(event.request);
+//         })
+//         .catch(function(error) {
+//             console.log('error cannot fetch');
+//         })
+//     );
+// });
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.match(event.request)
+        .then(function(response) {
+            // Cache hit - return response
+            if (response) {
+                console.log(event.request);
+                return response;
+            }
+  
+            // IMPORTANT: Clone the request. A request is a stream and
+            // can only be consumed once. Since we are consuming this
+            // once by cache and once by the browser for fetch, we need
+            // to clone the response.
+            var fetchRequest = event.request.clone();
+  
+            return fetch(fetchRequest).then(
+                function(response) {
+                    // Check if we received a valid response
+                    if(!response || response.status !== 200 || response.type !== 'basic') {
+                        return response;
+                    }
+    
+                    // IMPORTANT: Clone the response. A response is a stream
+                    // and because we want the browser to consume the response
+                    // as well as the cache consuming the response, we need
+                    // to clone it so we have two streams.
+                    var responseToCache = response.clone();
+    
+                    caches.open(staticCacheName)
+                        .then(function(cache) {
+                            cache.put(event.request, responseToCache);
+                        });
+
+                    return response;
+                }   
+            );
         })
         .catch(function(error) {
             console.log('error cannot fetch');
         })
     );
 });
-
 // self.addEventListener('fetch', (event) => {
 //     console.log(self);
 //     console.log(event.request.url);
